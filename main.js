@@ -16,7 +16,7 @@ var app = express();
 var server = https.createServer(app);
 server.listen(8080);
 // login
-app.get("/login", (req, res) => {
+app.post("/login", (req, res) => {
     req.on("data", (data) => {
         var str = data.toString();
         var obj = qs.parse(str);
@@ -43,7 +43,7 @@ app.get("/login", (req, res) => {
     })
 });
 // signin
-app.get("/signin", (req, res) => {
+app.post("/signin", (req, res) => {
     req.on("data", (data) => {
         var str = data.toString();
         var obj = qs.parse(str);
@@ -69,7 +69,7 @@ app.get("/signin", (req, res) => {
     })
 });
 // selectall
-app.get("/selectall", (req, res) => {
+app.post("/selectall", (req, res) => {
     req.on("data", (data) => {
         var str = data.toString();
         var obj = qs.parse(str);
@@ -94,7 +94,7 @@ app.get("/selectall", (req, res) => {
     })
 });
 // selectone
-app.get("/selectone", (req, res) => {
+app.post("/selectone", (req, res) => {
     req.on("data", (data) => {
         var str = data.toString();
         var obj = qs.parse(str);
@@ -121,7 +121,7 @@ app.get("/selectone", (req, res) => {
     })
 });
 // deleteone
-app.get("/deleteone", (req, res) => {
+app.post("/deleteone", (req, res) => {
     req.on("data", (data) => {
         var str = data.toString();
         var obj = qs.parse(str);
@@ -153,7 +153,7 @@ app.get("/deleteone", (req, res) => {
     })
 });
 // insertone
-app.get("/insertone", (req, res) => {
+app.post("/insertone", (req, res) => {
     req.on("data", (data) => {
         var str = data.toString();
         var obj = qs.parse(str);
